@@ -1,0 +1,261 @@
+body{
+    margin: 0;
+}
+#welcome-page{
+    background: linear-gradient(-45deg, #e4f9f5, #B9D6F2);
+    position: relative;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows:  1fr 1fr auto;
+    animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.title-text{
+    font-size: 2em;
+    grid-row: span 2;
+    padding-top: 100px;
+}
+.title-text h1{
+    font-family: 'Bree Serif', serif;
+}
+.title-text h2{
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+#tree{
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+.clouds{
+    height: 70px;
+}
+#first-cloud{
+    grid-column: span 2;
+    grid-column-start: 2;
+    margin-left: 25%;
+}
+#second-cloud{
+    margin-left: 300px;
+}
+.features{
+    text-align: center;
+    margin: 100px 0 200px 0;
+}
+
+#pfp{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: width 1.5s, height 1s, border-radius 0.5s;
+}
+
+#pfp:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 300px;
+    height: 400px;
+    border-radius: 0;
+}
+
+#intro{
+    width: 40%;
+    margin: auto;
+}
+
+#hobbies h4{
+    display: block;
+    font-size: 2em;
+}
+.apple-card, .spotify-card, .photo-card{
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 10px;
+}
+.card:hover{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+#apple-image, #spotify-image{
+    margin: 5px;
+    width: 200px;
+    height: 100px;
+}
+#photos{
+    width: 400px;
+    height: 200px;
+}
+h3{
+    font-size: 3em;
+    color: rgb(47, 168, 195);
+    text-decoration: underline;
+}
+
+h4{
+    color: rgb(47, 168, 195);
+}
+
+hr {
+    border: dotted rgb(89, 185, 185) 6px ;
+    width: 4%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-bottom: none;
+}
+.skills ul{
+    padding: 0;
+}
+.image{
+    display: inline-block;
+    width: 50%;
+}
+
+.web-design > img{
+    float: left;
+    height: 300px;
+}
+
+.data-science > img{
+    float: left;
+    height: 170px;
+    margin-top: 50px;
+    margin-right: 15px;
+}
+
+.image > h4{
+    display: block;
+    float: left;
+    font-size: 2em;
+}
+.image > p{
+    float:left;
+    width: 300px;
+    text-align: left;
+}
+
+li{
+    list-style: none;
+}
+
+.final-container{
+    background-color: #e4f9f5;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+.final-container > div p{
+    color: rgb(47, 168, 195);
+}
+.content{
+    margin: 10px;
+}
+
+@media screen and (min-width: 350px) and (max-width: 480px) {
+
+    body{
+        margin: 0;
+    }
+
+    #welcome-page{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 700px;
+    }
+    .title-text{
+        padding: 0;
+    }
+    #tree{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        height: 150px;
+    }
+    .clouds{
+        height: 50px;
+    }
+    #first-cloud{
+        display: none;
+    }
+    #second-cloud{
+        margin-top: 40px;
+        margin-left: 250px;
+    }
+
+    .data-science > img{
+        margin-top: 200px;
+        
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+    
+    body{
+        margin: 0;
+    }
+    #welcome-page{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 1000px;
+    }
+    .title-text{
+        padding: 0;
+        margin-top: 20%;
+        margin-left: 50px;
+    }
+
+    .clouds{
+        height: 50px;
+    }
+
+    #first-cloud{
+     margin-left: 40px;
+    }
+    #second-cloud{
+        margin-top: 150px;
+        margin-left: 300px;
+    }
+
+    #tree{
+        position: absolute;
+        bottom: 1px;
+        height: 200px;
+    }
+
+}
+@media screena and (min-width: 768px) and (max-width: 1280px){
+    image :where(h4, p){
+        
+    }
+}
+
+@media screen and (min-width: 1281px){
+    .image p{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1380px){
+    .image h4{
+        float: none;
+    }
+
+    .image p{
+        margin-left: 15%; 
+    }
+}
